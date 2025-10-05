@@ -1,0 +1,63 @@
+[data-radix-focus-guard] {
+    background-color: black;
+}
+
+[cmdk-item] {
+    @apply p-1 mb-1 rounded-md;
+}
+
+[cmdk-item]:hover {
+    @apply bg-neutral-400/10;
+}
+
+[cmdk-item][data-selected="true"] {
+    @apply bg-neutral-400/20;
+}
+
+[cmdk-input] {
+    @apply w-full p-3 outline-none bg-transparent placeholder:text-neutral-500/60 border-b border-neutral/10;
+}
+
+[cmdk-list] {
+    @apply px-3 flex flex-col gap-2 items-stretch max-h-[400px] h-[calc(100vh-100px)];
+}
+
+[cmdk-group-heading] {
+    @apply text-sm font-bold opacity-70 ml-1 my-2;
+}
+
+[cmdk-dialog] {
+    @apply bg-base sprinkle-primary bg-opacity-97 backdrop-blur shadow pb-4 rounded-2xl shadow-2xl relative outline-none;
+    position: fixed;
+    width: 80vw;
+    max-width: 675px;
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity;
+    transform-origin: center center;
+    animation: dialogIn 0.3s forwards;
+}
+
+[cmdk-dialog][data-state="closed"] {
+    animation: dialogOut 0.2s forwards;
+}
+
+@keyframes dialogIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes dialogOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+[cmdk-empty] {
+    @apply flex justify-center items-center text-sm whitespace-pre-wrap opacity-70;
+}
+
+[cmdk-overlay] {
+    @apply fixed inset-0 bg-black bg-opacity-50;
+}

@@ -1,10 +1,8 @@
 {
+  "extends": ["./tsconfig.base.json"],
   "compilerOptions": {
-    "composite": true,
-    "skipLibCheck": true,
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true
+    "lib": ["ES2020"],
   },
-  "include": ["vite.config.ts"]
+  "include": ["server", "*.config.*", "shared", "test", "scripts", "tools", "dist/.nitro/types"],
+  "exclude": ["eslint.config.mjs"]
 }

@@ -1,0 +1,10 @@
+# Build directories
+build/*
+dist/*
+public/*
+**/.next/*
+**/node_modules/*
+
+jsconfig.json
+imports.app.d.ts
+server/glob.d.ts
